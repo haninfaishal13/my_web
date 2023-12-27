@@ -1,0 +1,166 @@
+:root {
+    --pink: #d58a94;
+    --navy: rgb(52, 68, 95);
+    --darkblue: rgb(15,28,62);
+    --softpink: rgb(248, 203, 204);
+    --milkwhite:rgb(254, 252, 255);
+    --bg: #0a0a0a;
+    --shadow: 0 2px 2px rgba(255,255,255,0.5);
+}
+
+body{
+    font-size: 1.2rem;
+    font-family: 'Work Sans', sans-serif;
+
+}
+
+.cover-page{
+    position: absolute;
+    overflow:hidden;
+    top:0px;
+    bottom:0px;
+    width: 100%;
+    max-height: 100%;
+    z-index: 100;
+    /* background-color:#d58a94; */
+    transition: all 1s ease-out;
+}
+.cover-page .image-ornament {
+    position: absolute;
+    top:60%;
+}
+
+.cover-page.invitation-open{
+    /* background-color:#d58a94; */
+    top:-100%;
+}
+
+
+.bg-flower{
+    /* background-color: rgba(50,50,50, 0.4); */
+    background-image: url('/assets/image/wedding/wallpaper-flower.jpeg');
+}
+
+.fullpage {
+    min-height: 100vh;
+    /* background-color: var(--pink) */
+}
+
+.image-cover {
+    /* background-image: url('/assets/image/wedding/wedding-ring.jpg'); */
+    /* background-image: url('/assets/image/wedding/wallpaper-flower.jpeg'); */
+    background-size:cover;
+    background-position:center;
+}
+
+.fullpage h1 {
+    font-family: 'Sacramento', cursive;
+    font-size: 6rem;
+    margin-bottom:0px;
+}
+
+.fullpage h2 {
+    font-family: 'Sacramento', cursive;
+    font-size: 4.5rem;
+    margin-bottom:0px;
+}
+
+.fullpage h3 {
+    font-family: 'Sacramento', cursive;
+    font-size: 3rem;
+    margin-bottom: 0px;
+}
+
+.fullpage h4 {
+    font-family: 'Sacramento', cursive;
+    font-size: 2.3rem;
+    margin-bottom: 0px;
+}
+
+.fullpage h5 {
+    font-size: 1.8rem;
+}
+
+.fullpage .font-small {
+    font-size: 1rem;
+}
+
+.fullpage .header {
+    padding-top:5vh;
+}
+
+.fullpage .date {
+    margin-top:5vh;
+}
+
+.fullpage .card {
+    background-color: rgba(255,255,255, 0.4);
+    border-radius: 60px;
+}
+
+.fullpage h1,
+.fullpage h2,
+.fullpage h3,
+.fullpage h4,
+.fullpage h5,
+.fullpage span,
+.fullpage p{
+    text-shadow: var(--shadow)
+}
+
+.fullpage .receiver {
+    margin-top: 14vh;
+}
+
+@media only screen and (max-width: 600px) {
+    .fullpage .header {
+        padding-top:30%;
+    }
+    .fullpage .date {
+        margin-top:15%;
+    }
+    .fullpage .receiver {
+        margin-top: 25%;
+    }
+}
+
+/* .fullpage . */
+
+.btn-music {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    font-size: 18px;
+    border: solid;
+    border-color:rgba(5,5,5, 0.4);
+    outline: none;
+    background-color: rgba(50,50,50, 0.4);
+    color: white;
+    cursor: pointer;
+    padding: 8px 13px;
+    border-radius: 4px;
+}
+
+.bg-pink {
+    background-color: var(--pink);
+}
+
+.bg-darkblue {
+    background-color: var(--darkblue);
+    color:var(--milkwhite);
+}
+
+.bg-milkwhite {
+    background-color: var(--milkwhite);
+}
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 2s all ease;
+}
+.reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+}
