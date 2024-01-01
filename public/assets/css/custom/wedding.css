@@ -23,11 +23,11 @@ body{
     max-height: 100%;
     z-index: 100;
     /* background-color:#d58a94; */
-    transition: all 1s ease-out;
+    transition: all 1.5s ease-in-out;
 }
-.cover-page .image-ornament {
+.cover-page .image-ornament-bottom {
     position: absolute;
-    top:60%;
+    top:65%;
 }
 
 .cover-page.invitation-open{
@@ -43,7 +43,68 @@ body{
 
 .fullpage {
     min-height: 100vh;
+    overflow:hidden;
+    /* position:relative; */
     /* background-color: var(--pink) */
+}
+
+.overflow-hidden {
+    overflow:hidden;
+}
+
+.bg-flower-1{
+    position:absolute;
+    right:-20%;
+    top:-40%;
+    transform:rotate(-45deg);
+    transition:all 1s ease-in-out;
+}
+
+.bg-flower-1.active{
+    transform:rotate(0deg);
+}
+
+.bg-flower-2{
+    position:absolute;
+    left:-20%;
+    top:28%;
+    transform:rotate(45deg);
+    transition:all 1s ease-in-out;
+}
+
+.bg-flower-2.active{
+    transform:rotate(0deg);
+}
+
+.bg-flower-3{
+    position:absolute;
+    right:-20%;
+    top:20%;
+    transform:rotate(45deg);
+    transition:all 1s ease-in-out;
+}
+.bg-flower-3.active{
+    transform:rotate(0deg);
+}
+.bg-flower-4{
+    position:absolute;
+    left:-20%;
+    top: 40%;
+    transform:rotate(-45deg);
+    transition:all 1s ease-in-out;
+}
+.bg-flower-4.active{
+    transform:rotate(0deg);
+}
+.bg-flower-5{
+    position:absolute;
+    right:-22%;
+    top: 70%;
+    transform:rotate(-45deg);
+    transition:all 1s ease-in-out;
+}
+.bg-flower-5.active{
+    transform:rotate(0deg);
 }
 
 .image-cover {
@@ -54,31 +115,31 @@ body{
 }
 
 .fullpage h1 {
-    font-family: 'Sacramento', cursive;
     font-size: 6rem;
     margin-bottom:0px;
 }
 
 .fullpage h2 {
-    font-family: 'Sacramento', cursive;
     font-size: 4.5rem;
     margin-bottom:0px;
 }
 
 .fullpage h3 {
-    font-family: 'Sacramento', cursive;
     font-size: 3rem;
     margin-bottom: 0px;
 }
 
 .fullpage h4 {
-    font-family: 'Sacramento', cursive;
     font-size: 2.3rem;
     margin-bottom: 0px;
 }
 
 .fullpage h5 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+}
+
+.fullpage h5.font-scmt {
+    font-size:2rem;
 }
 
 .fullpage .font-small {
@@ -112,17 +173,6 @@ body{
     margin-top: 14vh;
 }
 
-@media only screen and (max-width: 600px) {
-    .fullpage .header {
-        padding-top:30%;
-    }
-    .fullpage .date {
-        margin-top:15%;
-    }
-    .fullpage .receiver {
-        margin-top: 25%;
-    }
-}
 
 /* .fullpage . */
 
@@ -142,7 +192,15 @@ body{
 }
 
 .bg-pink {
-    background-color: var(--pink);
+    background-image: url('/assets/image/wedding/bg_pink_texture_2.jpeg');
+    background-size:cover;
+    background-position:center;
+}
+
+.bg-pink-mirror {
+    background-image: url('/assets/image/wedding/bg_pink_texture_2_mirror.jpeg');
+    background-size:cover;
+    background-position:center;
 }
 
 .bg-darkblue {
@@ -163,4 +221,80 @@ body{
 .reveal.active{
     transform: translateY(0);
     opacity: 1;
+}
+.font-scmt{
+    font-family: 'Sacramento', cursive;
+}
+.font-bold{
+    font-weight:bold;
+}
+.pos-relative{
+    position:relative;
+}
+.welcome-flower-top{
+    position:absolute;
+    left:50%;
+    top:10%;
+}
+.welcome-flower-bottom{
+    position:absolute;
+    left:50%;
+    bottom: 15%;
+}
+.welcome-flower-bottom .img-flower, .welcome-flower-top .img-flower{
+    position:relative;
+    left:-50%;
+}
+.bride-photo, .groom-photo{
+    background-color:antiquewhite;
+    width:10em;
+    box-shadow:5px 10px 18px rgba(0,0,0,.12),5px 10px 18px rgba(0,0,0,.24);
+    border-radius:40%;
+    overflow:hidden;
+}
+
+.couple-photo {
+    width:80vh;
+}
+
+@media only screen and (max-width: 600px) {
+    .fullpage .header {
+        padding-top:30%;
+    }
+    .fullpage .date {
+        margin-top:15%;
+    }
+    .fullpage .receiver {
+        margin-top: 25%;
+    }
+    .bg-flower-1{
+        position:absolute;
+        right:-40%;
+        top:-30%;
+    }
+
+    .bg-flower-2{
+        position:absolute;
+        left:-55%;
+        top:45%;
+    }
+
+    .bg-flower-3{
+        position:absolute;
+        right:-70%;
+        top:20%;
+    }
+    .bg-flower-4{
+        position:absolute;
+        left:-70%;
+        top:50%
+    }
+    .bg-flower-5{
+        position:absolute;
+        right:-70%;
+        top: 94%;
+    }
+    .couple-photo {
+        width:90vw;
+    }
 }
